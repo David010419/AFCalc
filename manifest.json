@@ -1,0 +1,17 @@
+{
+  "name": "AirConv Pro - Conversor Air Fryer",
+  "short_name": "AirConv",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#F97316",
+  "description": "Calculadora inteligente para cocinar en freidora de aire.",
+  "icons": [
+    {
+      "src": "./airconv_flame_icon_1775494654480.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

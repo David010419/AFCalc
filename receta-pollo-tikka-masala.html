@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollo Tikka Masala en Air Fryer | Receta Paso a Paso | AirConv Pro</title>
+    <meta name="description"
+        content="Receta definitiva de Pollo Tikka Masala en freidora de aire. Jugoso, especiado y listo en menos de 40 minutos. Ingredientes, pasos y trucos pro.">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div id="app">
+        <nav class="top-nav">
+            <div class="nav-container">
+                <div class="nav-logo" onclick="window.location.href='./index.html'" style="cursor: pointer;">
+                    <i data-lucide="flame"></i>
+                    <span>AirConv</span>
+                </div>
+                <div class="nav-links">
+                    <a href="./index.html">Conversor</a>
+                    <a href="./recetas.html" class="active">Recetas</a>
+                    <a href="./blog.html">Blog</a>
+                    <a href="./contacto.html">Contacto</a>
+                    <a href="./sobrenosotros.html">Nosotros</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-container" style="margin-top: 3rem;">
+            <article class="converter-card" style="max-width: 900px; margin: 0 auto; padding: 0; overflow: hidden;">
+                <!-- Header con Imagen -->
+                <div style="position: relative; height: 350px; width: 100%;">
+                    <img src="assets/recetas/tikkamasala.webp" alt="Pollo Tikka Masala Air Fryer"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(15, 23, 42, 0.9));">
+                        <h1 style="font-size: 2.5rem; color: white; margin-bottom: 0.5rem;">Pollo Tikka Masala</h1>
+                        <div style="display: flex; gap: 1rem; font-size: 0.9rem;">
+                            <span
+                                style="background: var(--accent-color); padding: 0.25rem 0.75rem; border-radius: 2rem;">⚡
+                                40 min</span>
+                            <span
+                                style="background: rgba(255,255,255,0.1); padding: 0.25rem 0.75rem; border-radius: 2rem;">🥗
+                                Saludable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="padding: 2.5rem;">
+                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem; margin-bottom: 2rem;">
+                        ¿Quieres disfrutar de un clásico de la cocina india sin complicarte? Este Pollo Tikka Masala en
+                        Air Fryer es jugoso, está lleno de sabor y se cocina prácticamente solo. Ideal para familias o
+                        para impresionar en una cena de fin de semana.
+                    </p>
+
+                    <div class="seo-grid" style="margin-bottom: 3rem;">
+                        <!-- Ingredientes -->
+                        <div class="seo-text-card">
+                            <h3><i data-lucide="shopping-cart"></i> Ingredientes (Toca para añadir)</h3>
+                            <div class="ingredient-item-interactive">
+                                <span>🍗 800 g contramuslos deshuesados</span>
+                                <button class="btn-add-ingredient" data-name="800g Contramuslos" onclick="toggleIngredient('800g Contramuslos', this)"><i data-lucide="plus"></i></button>
+                            </div>
+                            <div class="ingredient-item-interactive">
+                                <span>🫑 100 g pimiento verde picado</span>
+                                <button class="btn-add-ingredient" data-name="100g Pimiento Verde" onclick="toggleIngredient('100g Pimiento Verde', this)"><i data-lucide="plus"></i></button>
+                            </div>
+                            <div class="ingredient-item-interactive">
+                                <span>🧅 200 g cebolla picada</span>
+                                <button class="btn-add-ingredient" data-name="200g Cebolla" onclick="toggleIngredient('200g Cebolla', this)"><i data-lucide="plus"></i></button>
+                            </div>
+                            <div class="ingredient-item-interactive">
+                                <span>🧄 1-2 dientes de ajo</span>
+                                <button class="btn-add-ingredient" data-name="Ajo (1-2 dientes)" onclick="toggleIngredient('Ajo (1-2 dientes)', this)"><i data-lucide="plus"></i></button>
+                            </div>
+                            <div class="ingredient-item-interactive">
+                                <span>🍅 200 ml tomate frito</span>
+                                <button class="btn-add-ingredient" data-name="200ml Tomate Frito" onclick="toggleIngredient('200ml Tomate Frito', this)"><i data-lucide="plus"></i></button>
+                            </div>
+                            <div class="ingredient-item-interactive">
+                                <span>🥥 200 ml leche de coco</span>
+                                <button class="btn-add-ingredient" data-name="200ml Leche de Coco" onclick="toggleIngredient('200ml Leche de Coco', this)"><i data-lucide="plus"></i></button>
+                            </div>
+                            <div class="ingredient-item-interactive">
+                                <span>🌿 Especias: Curry, cúrcuma, jengibre, comino</span>
+                                <button class="btn-add-ingredient" data-name="Especias Tikka Masala" onclick="toggleIngredient('Especias Tikka Masala', this)"><i data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Info Rápida -->
+                        <div class="seo-text-card">
+                            <h3><i data-lucide="info"></i> Por qué es perfecta</h3>
+                            <p>Rápido y práctico: menos de 40 min.</p>
+                            <p>Sabor intenso y equilibrado.</p>
+                            <p>Textura jugosa gracias al contramuslo.</p>
+                            <p>Bonus: ¡Está mejor al día siguiente!</p>
+                        </div>
+                    </div>
+
+                    <!-- Instrucciones -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;"><i data-lucide="flame"
+                                style="color: var(--accent-color);"></i> Instrucciones paso a paso</h2>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div
+                                style="background: rgba(255,255,255,0.02); padding: 1.5rem; border-left: 4px solid var(--accent-color); border-radius: 0.5rem;">
+                                <strong>Paso 1:</strong> Pica la cebolla, el pimiento y el ajo. Corta el pollo en trozos
+                                medianos y sazona.
+                            </div>
+                            <div
+                                style="background: rgba(255,255,255,0.02); padding: 1.5rem; border-left: 4px solid var(--accent-color); border-radius: 0.5rem;">
+                                <strong>Paso 2:</strong> En la freidora (sin rejilla), añade aceite y verduras. 195°C
+                                durante 10 min.
+                            </div>
+                            <div
+                                style="background: rgba(255,255,255,0.02); padding: 1.5rem; border-left: 4px solid var(--accent-color); border-radius: 0.5rem;">
+                                <strong>Paso 3:</strong> Añade el pollo con más aceite. 200°C durante 8 min. Añade curry
+                                a mitad de cocción.
+                            </div>
+                            <div
+                                style="background: rgba(255,255,255,0.02); padding: 1.5rem; border-left: 4px solid var(--accent-color); border-radius: 0.5rem;">
+                                <strong>Paso 4:</strong> Mezcla leche de coco, tomate frito y especias. Añádela a la
+                                cubeta.
+                            </div>
+                            <div
+                                style="background: rgba(255,255,255,0.02); padding: 1.5rem; border-left: 4px solid var(--accent-color); border-radius: 0.5rem;">
+                                <strong>Paso 5:</strong> Cocina todo a 180°C por 9 min removiendo un par de veces.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tips y FAQs -->
+                    <div class="seo-grid">
+                        <div class="seo-text-card">
+                            <h3>🌟 Secretos del Éxito</h3>
+                            <p>Usa contramuslo para más jugosidad. Remueve a mitad para que espese. Sirve con arroz
+                                basmati o pan naan.</p>
+                        </div>
+                        <div class="seo-text-card">
+                            <h3>❓ Preguntas Frecuentes</h3>
+                            <details>
+                                <summary>¿Se puede hacer con pechuga?</summary>
+                                <p>Sí, pero quedará un poco más seco que el contramuslo.</p>
+                            </details>
+                            <details>
+                                <summary>¿Se puede congelar?</summary>
+                                <p>Sí, la salsa aguanta muy bien en el congelador.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- BOTÓN VOLVER CON AIRE EXTRA (PARA MÓVIL) -->
+            <div style="text-align: center; margin-top: 2rem; margin-bottom: 6rem; position: relative; z-index: 50;">
+                <a href="./recetas.html" class="btn-primary"
+                    style="display: inline-block; text-decoration: none; padding: 1rem 2rem; font-weight: 700;">
+                    <i data-lucide="arrow-left" style="width: 18px; margin-right: 0.5rem; vertical-align: middle;"></i>
+                    Volver al Recetario
+                </a>
+            </div>
+        </main>
+
+        <!-- SISTEMA DE CESTA -->
+    <div id="cart-floating-btn" class="cart-floating-btn" onclick="toggleCartSidebar()">
+        <i data-lucide="shopping-cart"></i>
+        <div class="cart-count-badge" id="cart-count">0</div>
+    </div>
+
+    <div id="cart-overlay" class="cart-overlay" onclick="toggleCartSidebar()"></div>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Cesta de Compra</h3>
+            <button onclick="toggleCartSidebar()" style="background:transparent; border:none; color:white; cursor:pointer;">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div id="cart-items-list" class="cart-items-list">
+            <!-- Items dinámicos -->
+        </div>
+        <div class="cart-footer">
+            <button onclick="shareToWhatsApp()" class="btn-primary" style="background:#22c55e; border:none; display:flex; align-items:center; justify-content:center; gap:0.5rem;">
+                <i data-lucide="message-square"></i> Enviar por WhatsApp
+            </button>
+            <button onclick="copyToClipboard()" class="btn-secondary-sm" style="width:100%;">
+                <i data-lucide="copy"></i> Copiar Lista
+            </button>
+            <button onclick="cart=[]; saveCart(); renderCart(); updateCartCount();" class="btn-secondary-sm" style="width:100%; border-color:rgba(239,68,68,0.2); color:#ef4444;">
+                <i data-lucide="trash-2"></i> Vaciar Cesta
+            </button>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="./cart.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>

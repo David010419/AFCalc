@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirConv Pro | Conversor de Horno a Freidora de Aire</title>
+
+    <!-- Open Graph (FaceBook / WhatsApp) -->
+    <meta property="og:title" content="AirConv Pro | Conversor Inteligente Air Fryer">
+    <meta property="og:description"
+        content="Convierte tus recetas de horno a Air Fryer en un clic. ¡Rápido, gratis y preciso!">
+    <meta property="og:type" content="website">
+    <title>AirConv Pro | Conversor de Horno a Freidora de Aire</title>
+    <meta name="description"
+        content="Convierte fácilmente tiempos y temperaturas de horno convencional a Air Fryer. Ahorra energía y cocina más saludable con nuestra calculadora gratuita.">
+    <meta name="keywords"
+        content="conversor air fryer, calcular tiempo air fryer, horno a freidora de aire, recetas air fryer, ahorro energia cocina">
+
+    <!-- PWA & Mobile -->
+    <meta name="theme-color" content="#F97316">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./airconv_flame_icon_1775494654480.png">
+    <link rel="icon" type="image/png" href="./airconv_flame_icon_1775494654480.png">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div id="app">
+        <nav class="top-nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i data-lucide="flame"></i>
+                    <span>AirConv</span>
+                </div>
+                <div class="nav-links">
+                    <a href="./index.html" class="active">Conversor</a>
+                    <a href="./recetas.html">Recetas</a>
+                    <a href="./blog.html">Blog</a>
+                    <a href="./contacto.html">Contacto</a>
+                    <a href="./sobrenosotros.html">Nosotros</a>
+                </div>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="logo">
+                <i data-lucide="flame" class="icon-logo"></i>
+                <h1>AirConv <span>Pro</span></h1>
+            </div>
+            <p class="subtitle">Domina tu freidora de aire con precisión gourmet</p>
+        </header>
+
+        <main class="main-container">
+            <!-- Espacio para Anuncio Superior (AdSense) -->
+            <div class="ad-placeholder-top">
+                <p>Publicidad</p>
+            </div>
+
+            <section class="converter-card" id="converter">
+                <div class="card-header">
+                    <h2>Conversor Inteligente</h2>
+                    <p>Selecciona un alimento o introduce tus datos</p>
+                </div>
+
+                <!-- Presets arriba y más pequeños -->
+                <div class="presets-compact" id="presets"></div>
+
+                <hr class="separator">
+
+                <div class="inputs-grid">
+                    <div class="input-group">
+                        <label for="oven-temp">Temperatura del Horno</label>
+                        <div class="control-wrapper">
+                            <button class="btn-ctrl" id="btn-temp-minus" aria-label="Bajar temperatura"><i
+                                    data-lucide="minus"></i></button>
+                            <div class="input-display">
+                                <input type="number" id="oven-temp" value="200" step="1">
+                                <span class="unit">°C</span>
+                            </div>
+                            <button class="btn-ctrl" id="btn-temp-plus" aria-label="Subir temperatura"><i
+                                    data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="oven-time">Tiempo del Horno</label>
+                        <div class="control-wrapper">
+                            <button class="btn-ctrl" id="btn-time-minus" aria-label="Bajar tiempo"><i
+                                    data-lucide="minus"></i></button>
+                            <div class="input-display">
+                                <input type="number" id="oven-time" value="20" step="1">
+                                <span class="unit">min</span>
+                            </div>
+                            <button class="btn-ctrl" id="btn-time-plus" aria-label="Subir tiempo"><i
+                                    data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-container">
+                    <div class="result-item" id="result-temp-box">
+                        <span class="result-label">Air Fryer Temperatura</span>
+                        <div class="result-value">
+                            <span id="air-temp">180</span><small>°C</small>
+                        </div>
+                    </div>
+
+                    <div class="result-item" id="result-time-box">
+                        <span class="result-label">Air Fryer Tiempo</span>
+                        <div class="result-value">
+                            <span id="air-time">15</span><small>min</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tips-box">
+                    <i data-lucide="info"></i>
+                    <p>Truco: Reduce siempre un 20% la temperatura y un 25% el tiempo respecto al horno tradicional.</p>
+                </div>
+            </section>
+
+            <!-- TEMPORIZADOR SUBIDO (MEJOR UX) -->
+            <section class="timer-section" id="timer-box" style="margin-top: 1.5rem;">
+                <div class="timer-header">
+                    <h3>Temporizador de Cocción</h3>
+                    <button class="btn-set-timer" id="btn-sync-time">
+                        <i data-lucide="clock"></i> Usar tiempo calculado
+                    </button>
+                </div>
+
+                <div class="timer-display">
+                    <span id="timer-text">00:00</span>
+                    <div class="timer-progress">
+                        <div id="progress-bar"></div>
+                    </div>
+                </div>
+
+                <div class="timer-controls">
+                    <button class="btn-primary" id="btn-timer-start">Iniciar</button>
+                    <button class="btn-secondary" id="btn-timer-reset">Reset</button>
+                </div>
+                <!-- Alarma sonora -->
+                <audio id="alarm-sound" preload="auto">
+                    <source src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" type="audio/mpeg">
+                </audio>
+            </section>
+
+            <!-- SECCIÓN AFILIADOS: MEJORES FREIDORAS -->
+            <section class="affiliate-section" id="shopping">
+                <div class="section-title">
+                    <i data-lucide="shopping-bag"></i>
+                    <h2>Mejores Air Fryers 2026</h2>
+                </div>
+                <div class="affiliate-grid">
+                    <div class="product-card">
+                        <div class="badge">Premium</div>
+                        <img src="https://m.media-amazon.com/images/I/81HDt6NDs7L._AC_SL1500_.jpg"
+                            alt="Cosori Air Fryer">
+                        <h4>Cosori Freidora de Aire 5,7L</h4>
+                        <p>Diseño Antióxido, Tecnología Calefacción Uniforme, 40 Recetas, Reducción de Grasas para una
+                            Vida Saludable, Eficiencia Energética, 1700W</p>
+                        <a href="https://amzn.to/4sTkiwd" class="btn-buy" target="_blank"
+                            rel="nofollow noopener">Comprar en Amazon</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="badge">Calidad-Precio</div>
+                        <img src="https://m.media-amazon.com/images/I/81E6RwXi43L._AC_SL1500_.jpg" alt="Ninja Foodi">
+                        <h4>MasterPro Freidora sin aceite Air Fryer XXL</h4>
+                        <p>Capacidad de 6L y 1800W de Potencia | Con Pantalla LED Táctil y Cesta Antiadherente</p>
+                        <a href="https://amzn.to/4vfhf3e" class="btn-buy" target="_blank"
+                            rel="nofollow noopener">Comprar en Amazon</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="badge">Compacta</div>
+                        <img src="https://m.media-amazon.com/images/I/519AN1zQmbL._AC_SL1000_.jpg"
+                            alt="Cecotec Cecofry">
+                        <h4>Cecotec Cecofry 2026</h4>
+                        <p>1700 W, Dietética y Digital, Panel Táctil, Acabados en Acero Inox, Tecnología PerfectCook</p>
+                        <a href="https://amzn.to/47KxZoY" class="btn-buy" target="_blank"
+                            rel="nofollow noopener">Comprar en Amazon</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN SEO: FAQs (BAJADA AL FINAL) -->
+            <section class="seo-content-section" style="margin-top: 3rem; margin-bottom: 3rem;">
+                <div class="seo-grid">
+                    <div class="seo-text-card">
+                        <h3>¿Cómo usar el conversor?</h3>
+                        <p>Simplemente introduce la temperatura y el tiempo que indica tu receta de horno tradicional.
+                            Nuestra herramienta aplicará la "Regla de Oro" de la cocina en Air Fryer para que tus platos
+                            queden crujientes y en su punto exacto.</p>
+                    </div>
+                    <div class="seo-text-card">
+                        <h3>Preguntas Frecuentes</h3>
+                        <details>
+                            <summary>¿Es lo mismo un horno que una Air Fryer?</summary>
+                            <p>No exactamente. La freidora de aire es un horno de convección ultra rápido. Por eso los
+                                tiempos son más cortos.</p>
+                        </details>
+                        <details>
+                            <summary>¿Debo precalentar la freidora?</summary>
+                            <p>Depende del modelo, pero normalmente 3 minutos a 200°C son suficientes para resultados
+                                óptimos.</p>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Espacio para Anuncio Inferior (AdSense) -->
+            <div class="ad-placeholder-bottom">
+                <p>Publicidad</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 AirConv Pro. Herramienta gratuita para la comunidad.</p>
+            <div class="footer-links">
+                <a href="./privacidad.html">Privacidad</a>
+                <a href="./sobrenosotros.html">Sobre nosotros</a>
+            </div>
+        </footer>
+    </div>
+
+    <div id="cookie-modal" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <i data-lucide="cookie"></i>
+            <p>Usamos cookies para mejorar tu experiencia y anuncios. ¿Aceptas nuestra <a
+                    href="./privacidad.html">política de privacidad</a>?</p>
+            <div class="cookie-actions">
+                <button id="btn-cookie-accept" class="btn-primary-sm">Aceptar</button>
+                <button id="btn-cookie-deny" class="btn-secondary-sm">Denegar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SISTEMA DE CESTA -->
+    <div id="cart-floating-btn" class="cart-floating-btn" onclick="toggleCartSidebar()">
+        <i data-lucide="shopping-cart"></i>
+        <div class="cart-count-badge" id="cart-count">0</div>
+    </div>
+
+    <div id="cart-overlay" class="cart-overlay" onclick="toggleCartSidebar()"></div>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Cesta de Compra</h3>
+            <button onclick="toggleCartSidebar()" style="background:transparent; border:none; color:white; cursor:pointer;">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div id="cart-items-list" class="cart-items-list">
+            <!-- Items dinámicos -->
+        </div>
+        <div class="cart-footer">
+            <button onclick="shareToWhatsApp()" class="btn-primary" style="background:#22c55e; border:none; display:flex; align-items:center; justify-content:center; gap:0.5rem;">
+                <i data-lucide="message-square"></i> Enviar por WhatsApp
+            </button>
+            <button onclick="copyToClipboard()" class="btn-secondary-sm" style="width:100%;">
+                <i data-lucide="copy"></i> Copiar Lista
+            </button>
+            <button onclick="cart=[]; saveCart(); renderCart(); updateCartCount();" class="btn-secondary-sm" style="width:100%; border-color:rgba(239,68,68,0.2); color:#ef4444;">
+                <i data-lucide="trash-2"></i> Vaciar Cesta
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenedor de Notificaciones -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="./main.js"></script>
+    <script src="./cart.js"></script>
+    <script>
+        // Forzar la creación de iconos después de que todo cargue
+        window.addEventListener('load', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>

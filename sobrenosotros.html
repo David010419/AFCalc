@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | AirConv Pro</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div id="app">
+        <nav class="top-nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i data-lucide="flame"></i>
+                    <span>AirConv</span>
+                </div>
+                <div class="nav-links">
+                    <a href="./index.html">Conversor</a>
+                    <a href="./recetas.html">Recetas</a>
+                    <a href="./blog.html">Blog</a>
+                    <a href="./contacto.html">Contacto</a>
+                    <a href="./sobrenosotros.html" class="active">Nosotros</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-container" style="margin-top: 3rem;">
+            <div class="converter-card" style="text-align: center;">
+                <div class="card-header">
+                    <div style="background: rgba(249, 115, 22, 0.1); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i data-lucide="users" style="color: var(--accent-color); width: 40px; height: 40px;"></i>
+                    </div>
+                    <h1>Nuestra Misión</h1>
+                    <p>Cocinando el futuro, un grado a la vez</p>
+                </div>
+                
+                <div style="color: var(--text-secondary); line-height: 1.8; font-size: 1rem; max-width: 500px; margin: 0 auto;">
+                    <p>En <strong>AirConv Pro</strong>, nacimos con una idea sencilla: hacer que la transición a una cocina más saludable sea fácil para todos.</p>
+                    <p style="margin-top: 1rem;">La freidora de aire ha revolucionado nuestras cocinas, pero adaptar las recetas de siempre puede ser un dolor de cabeza. Por eso hemos creado el conversor más preciso y elegante de la web.</p>
+                    <p style="margin-top: 1rem;">Pasión por la tecnología y la gastronomía unidos para ofrecerte herramientas gratuitas y útiles cada día.</p>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <a href="./index.html" class="btn-primary" style="display: inline-block; text-decoration: none;">Volver al Conversor</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 AirConv Pro. Diseñado para la comunidad de aire libre.</p>
+        </footer>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

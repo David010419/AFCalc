@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Cocina Saludable | AirConv Pro</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div id="app">
+        <nav class="top-nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i data-lucide="flame"></i>
+                    <span>AirConv</span>
+                </div>
+                <div class="nav-links">
+                    <a href="./index.html">Conversor</a>
+                    <a href="./recetas.html">Recetas</a>
+                    <a href="./blog.html" class="active">Blog</a>
+                    <a href="./contacto.html">Contacto</a>
+                    <a href="./sobrenosotros.html">Nosotros</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-container" style="margin-top: 3rem;">
+            <div class="section-title">
+                <i data-lucide="book-open"></i>
+                <h2>Entradas del Blog</h2>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                <!-- Artículo 1 -->
+                <article class="converter-card" style="padding: 2.5rem; max-width: 800px; margin: 0 auto; width: 100%;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--accent-color);">
+                        <i data-lucide="zap" style="width: 14px;"></i> AHORRO ENERGÉTICO
+                    </div>
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Air Fryer vs Horno: ¿Cuánto ahorras de luz?</h2>
+                    <div style="color: var(--text-secondary); line-height: 1.8;">
+                        <p>En el panorama energético actual, elegir el electrodoméstico adecuado puede marcar la diferencia en tu factura mensual. Según nuestros estudios, cocinar en una freidora de aire consume entre un **50% y un 70% menos** que un horno convencional.</p>
+                        <p style="margin-top: 1rem;">Esto se debe a tres factores clave: el menor tiempo de precalentamiento (3 min vs 15 min), la eficiencia de la convección de alta velocidad y el tamaño compacto del habitáculo. ¡Usa nuestro conversor para ahorrar cada día!</p>
+                    </div>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="converter-card" style="padding: 2.5rem; max-width: 800px; margin: 0 auto; width: 100%;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--accent-color);">
+                        <i data-lucide="award" style="width: 14px;"></i> TRUCOS DE COCINA
+                    </div>
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">5 Secretos para que TODO quede crujiente</h2>
+                    <div style="color: var(--text-secondary); line-height: 1.8;">
+                        <p>¿Tus patatas quedan blandas o tus alitas gomosas? Aquí te revelamos los secretos de los expertos:</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+                            <li>**Seca siempre los alimentos:** La humedad es la enemiga del crujiente. Usa papel de cocina.</li>
+                            <li>**No amontones:** El aire debe circular. Si llenas la cesta, el vapor humedecerá la comida.</li>
+                            <li>**Pulverizador de aceite:** Un toque de grasa ayuda a la reacción de Maillard para ese color dorado.</li>
+                            <li>**Agita a mitad de cocción:** Fundamental para un acabado uniforme.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 AirConv Pro. Tu guía diaria para cocinar mejor.</p>
+        </footer>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas Premium Air Fryer | AirConv Pro</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div id="app">
+        <nav class="top-nav">
+            <div class="nav-container">
+                <div class="nav-logo" onclick="window.location.href='./index.html'" style="cursor: pointer;">
+                    <i data-lucide="flame"></i>
+                    <span>AirConv</span>
+                </div>
+                <div class="nav-links">
+                    <a href="./index.html">Conversor</a>
+                    <a href="./recetas.html" class="active">Recetas</a>
+                    <a href="./blog.html">Blog</a>
+                    <a href="./contacto.html">Contacto</a>
+                    <a href="./sobrenosotros.html">Nosotros</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-container" style="margin-top: 3rem;">
+            <header style="text-align: center; margin-bottom: 3rem;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Recetario Gourmet</h1>
+                <p style="color: var(--text-secondary);">Selección de platos probados por expertos.</p>
+            </header>
+
+            <div class="affiliate-grid">
+                <!-- Receta 4: Pollo Tikka Masala (NUEVA) -->
+                <div class="product-card"
+                    style="border-color: var(--accent-color); background: rgba(249, 115, 22, 0.05);">
+                    <div class="badge" style="background: #ef4444;">🔥 NUEVA</div>
+                    <img src="assets/recetas/tikkamasala.webp" alt="Pollo Tikka Masala AirConv">
+                    <h4>Pollo Tikka Masala Premium</h4>
+                    <p>Un clásico de la India adaptado a tu Air Fryer. Jugoso, cremoso y listo en 40 min.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 1rem;">
+                        <button onclick="shareRecipe('Pollo Tikka Masala Premium')" class="btn-buy"
+                            style="padding: 0.5rem; font-size: 0.8rem; border-color: rgba(255,255,255,0.1); color: var(--text-secondary);"><i
+                                data-lucide="share-2" style="width: 14px;"></i> Compartir</button>
+                        <a href="./receta-pollo-tikka-masala.html" class="btn-buy"
+                            style="padding: 0.5rem; font-size: 0.8rem; background: var(--accent-color); color: white;"><i
+                                data-lucide="eye" style="width: 14px;"></i> Ver Receta</a>
+                    </div>
+                </div>
+
+                <!-- Receta 1 -->
+                <div class="product-card">
+                    <div class="badge">Nivel: Fácil</div>
+                    <img src="./recipe_chicken_wings_premium_1775495937582.png" alt="Alitas de Pollo AirConv">
+                    <h4>Alitas de Pollo Crujientes</h4>
+                    <p>El secreto está en el marinado. 25 min a 190°C y tendrás unas alitas que compiten con cualquier
+                        restaurante.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 1rem;">
+                        <button onclick="shareRecipe('Alitas de Pollo Crujientes')" class="btn-buy"
+                            style="padding: 0.5rem; font-size: 0.8rem; border-color: rgba(255,255,255,0.1); color: var(--text-secondary);"><i
+                                data-lucide="share-2" style="width: 14px;"></i> Compartir</button>
+                        <a href="./index.html?time=25&temp=190" class="btn-buy"
+                            style="padding: 0.5rem; font-size: 0.8rem;"><i data-lucide="play" style="width: 14px;"></i>
+                            Cocinar</a>
+                    </div>
+                </div>
+
+                <!-- Receta 2 -->
+                <div class="product-card">
+                    <div class="badge">Favorito</div>
+                    <img src="./recipe_french_fries_premium_1775495959460.png" alt="Patatas Fritas AirConv">
+                    <h4>Patatas "Fritas" de Verdad</h4>
+                    <p>Sin apenas aceite. El truco es remojarlas 30 min antes para quitar el almidón. 20 min a 200°C.
+                    </p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 1rem;">
+                        <button onclick="shareRecipe('Patatas Fritas Gourmet')" class="btn-buy"
+                            style="padding: 0.5rem; font-size: 0.8rem; border-color: rgba(255,255,255,0.1); color: var(--text-secondary);"><i
+                                data-lucide="share-2" style="width: 14px;"></i> Compartir</button>
+                        <a href="./index.html?time=20&temp=200" class="btn-buy"
+                            style="padding: 0.5rem; font-size: 0.8rem;"><i data-lucide="play" style="width: 14px;"></i>
+                            Cocinar</a>
+                    </div>
+                </div>
+
+                <!-- Receta 3 -->
+                <div class="product-card">
+                    <div class="badge">Saludable</div>
+                    <img src="./recipe_salmon_premium_1775495983461.png" alt="Salmón Teriyaki AirConv">
+                    <h4>Salmón Teriyaki Express</h4>
+                    <p>Jugoso por fuera y dorado por dentro. 12 min a 180°C. Comida gourmet en tiempo récord.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 1rem;">
+                        <button onclick="shareRecipe('Salmón Teriyaki Express')" class="btn-buy"
+                            style="padding: 0.5rem; font-size: 0.8rem; border-color: rgba(255,255,255,0.1); color: var(--text-secondary);"><i
+                                data-lucide="share-2" style="width: 14px;"></i> Compartir</button>
+                        <a href="./index.html?time=12&temp=180" class="btn-buy"
+                            style="padding: 0.5rem; font-size: 0.8rem;"><i data-lucide="play" style="width: 14px;"></i>
+                            Cocinar</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 AirConv Pro. Alimentando tu creatividad.</p>
+        </footer>
+    </div>
+
+    <!-- SISTEMA DE CESTA -->
+    <div id="cart-floating-btn" class="cart-floating-btn" onclick="toggleCartSidebar()">
+        <i data-lucide="shopping-cart"></i>
+        <div class="cart-count-badge" id="cart-count">0</div>
+    </div>
+
+    <div id="cart-overlay" class="cart-overlay" onclick="toggleCartSidebar()"></div>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Cesta de Compra</h3>
+            <button onclick="toggleCartSidebar()"
+                style="background:transparent; border:none; color:white; cursor:pointer;">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div id="cart-items-list" class="cart-items-list">
+            <!-- Items dinámicos -->
+        </div>
+        <div class="cart-footer">
+            <button onclick="shareToWhatsApp()" class="btn-primary"
+                style="background:#22c55e; border:none; display:flex; align-items:center; justify-content:center; gap:0.5rem;">
+                <i data-lucide="message-square"></i> Enviar por WhatsApp
+            </button>
+            <button onclick="copyToClipboard()" class="btn-secondary-sm" style="width:100%;">
+                <i data-lucide="copy"></i> Copiar Lista
+            </button>
+            <button onclick="cart=[]; saveCart(); renderCart(); updateCartCount();" class="btn-secondary-sm"
+                style="width:100%; border-color:rgba(239,68,68,0.2); color:#ef4444;">
+                <i data-lucide="trash-2"></i> Vaciar Cesta
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenedor de Notificaciones -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="./main.js"></script>
+    <script src="./cart.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        function shareRecipe(title) {
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    text: 'Mira esta receta gourmet para Air Fryer en AirConv Pro!',
+                    url: window.location.href
+                });
+            } else {
+                alert('¡Copiado al portapapeles! Comparte el enlace: ' + window.location.href);
+            }
+        }
+    </script>
+</body>
+
+</html>

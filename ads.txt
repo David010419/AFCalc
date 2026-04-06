@@ -1,0 +1,3 @@
+# AirConv Pro - Ads Auth
+# Sustituye "pub-0000000000000000" por tu ID de editor de AdSense una vez seas aprobado.
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
